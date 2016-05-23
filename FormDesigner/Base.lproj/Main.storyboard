@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Dq1-cI-JrV">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Example View Controller-->
+        <scene sceneID="Iq6-ac-sWy">
+            <objects>
+                <tableViewController id="ww9-m1-kCQ" customClass="ExampleViewController" customModule="FormDesigner" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="60T-nl-rZM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="VLa-kE-AGw">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VLa-kE-AGw" id="6B9-zq-AyJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ww9-m1-kCQ" id="BQy-eY-nhV"/>
+                            <outlet property="delegate" destination="ww9-m1-kCQ" id="TeI-yq-qGX"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JUB-ZH-JhT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1174" y="417"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tOC-EC-CiV">
+            <objects>
+                <navigationController id="Dq1-cI-JrV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YRj-SX-gks">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Iti-Za-h3x" kind="relationship" relationship="rootViewController" id="g4s-ZN-cQE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sNG-gi-NWb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-440" y="404"/>
+        </scene>
+        <!--Form Design View Controller-->
+        <scene sceneID="HFR-Ny-TsI">
+            <objects>
+                <tableViewController id="Iti-Za-h3x" userLabel="Form Design View Controller" customClass="ViewController" customModule="FormDesigner" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="oWu-wc-4nt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="jgd-a5-bWf" userLabel="Form Title">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="1ta-9m-LdE" userLabel="FormTitle">
+                                        <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1ta-9m-LdE" id="qXT-AM-JBS">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6Sd-wE-I03">
+                                                    <rect key="frame" x="16" y="8" width="568" height="27"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Form Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4b-j2-mYs">
+                                                            <rect key="frame" x="0.0" y="0.0" width="82" height="27"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Example" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wPP-JE-wD9">
+                                                            <rect key="frame" x="92" y="0.0" width="476" height="27"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                        </textField>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="6Sd-wE-I03" secondAttribute="trailing" constant="8" id="1Av-hO-UYX"/>
+                                                <constraint firstItem="6Sd-wE-I03" firstAttribute="top" secondItem="qXT-AM-JBS" secondAttribute="topMargin" id="5Ik-Uo-Fie"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="6Sd-wE-I03" secondAttribute="bottom" id="Mgs-Yi-7n7"/>
+                                                <constraint firstItem="6Sd-wE-I03" firstAttribute="leading" secondItem="qXT-AM-JBS" secondAttribute="leadingMargin" constant="8" id="PrB-io-awY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Form Items" id="B6t-MP-k80">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="200" id="GwQ-a3-qWo">
+                                        <rect key="frame" x="0.0" y="136" width="600" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GwQ-a3-qWo" id="9b3-Me-vrA">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fdk-JT-lPY" userLabel="TagView" customClass="TagListView" customModule="FormDesigner" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="584" height="183"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Fdk-JT-lPY" firstAttribute="top" secondItem="9b3-Me-vrA" secondAttribute="topMargin" id="CpT-Dv-Mw0"/>
+                                                <constraint firstItem="Fdk-JT-lPY" firstAttribute="leading" secondItem="9b3-Me-vrA" secondAttribute="leadingMargin" id="Ntt-3P-VaN"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Fdk-JT-lPY" secondAttribute="trailing" id="bUx-rf-5pG"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Fdk-JT-lPY" secondAttribute="bottom" id="mC7-0R-NKP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Common Used Fields:" id="i32-e7-5sK">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="160" id="spe-ve-XWJ">
+                                        <rect key="frame" x="0.0" y="364" width="600" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="spe-ve-XWJ" id="QKM-UX-Gk0">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="159"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Pal-oK-c5e" userLabel="Top Stack View">
+                                                    <rect key="frame" x="8" y="8" width="584" height="143"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9aI-Aj-3kk" userLabel="Stack View 1">
+                                                            <rect key="frame" x="0.0" y="0.0" width="584" height="38"/>
+                                                            <subviews>
+                                                                <button opaque="NO" tag="7" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h34-3C-uy2" customClass="BorderedButton" customModule="FormDesigner" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="146" height="38"/>
+                                                                    <state key="normal" title="First Name"/>
+                                                                    <connections>
+                                                                        <action selector="ButtonTap:" destination="Iti-Za-h3x" eventType="touchUpInside" id="2nZ-LR-9xJ"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="7" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mt0-9E-voY" customClass="BorderedButton" customModule="FormDesigner" customModuleProvider="target">
+                                                                    <rect key="frame" x="146" y="0.0" width="146" height="38"/>
+                                                                    <state key="normal" title="Last Name"/>
+                                                                    <connections>
+                                                                        <action selector="ButtonTap:" destination="Iti-Za-h3x" eventType="touchUpInside" id="TpL-Wv-VmX"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="13" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8z9-t0-uKN" customClass="BorderedButton" customModule="FormDesigner" customModuleProvider="target">
+                                                                    <rect key="frame" x="292" y="0.0" width="146" height="38"/>
+                                                                    <state key="normal" title="Password"/>
+                                                                    <connections>
+                                                                        <action selector="ButtonTap:" destination="Iti-Za-h3x" eventType="touchUpInside" id="esn-s1-i8K"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="25" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czw-8u-7MH" customClass="BorderedButton" customModule="FormDesigner" customModuleProvider="target">
+                                                                    <rect key="frame" x="438" y="0.0" width="146" height="38"/>
+                                                                    <state key="normal" title="Address"/>
+                                                                    <connections>
+                                                                        <action selector="ButtonTap:" destination="Iti-Za-h3x" eventType="touchUpInside" id="vur-yT-gho"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Dhn-uT-E7L" userLabel="Stack View 2">
+                                                            <rect key="frame" x="0.0" y="43" width="584" height="30"/>
+                                                            <subviews>
+                                                                <button opaque="NO" tag="10" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVc-em-xzj" customClass="BorderedButton" customModule="FormDesigner" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="146" height="30"/>
+                                                                    <state key="normal" title="E-mail"/>
+                                                                    <connections>
+                                                                        <action selector="ButtonTap:" destination="Iti-Za-h3x" eventType="touchUpInside" id="bsm-Cu-zyf"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="19" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPm-1q-ZZc" customClass="BorderedButton" customModule="FormDesigner" customModuleProvider="target">
+                                                                    <rect key="frame" x="146" y="0.0" width="146" height="30"/>
+                                                                    <state key="normal" title="Birthday"/>
+                                                                    <connections>
+                                                                        <action selector="ButtonTap:" destination="Iti-Za-h3x" eventType="touchUpInside" id="PJA-DR-dKg"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="20" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygA-OI-v9V" customClass="BorderedButton" customModule="FormDesigner" customModuleProvider="target">
+                                                                    <rect key="frame" x="292" y="0.0" width="146" height="30"/>
+                                                                    <state key="normal" title="Time"/>
+                                                                    <connections>
+                                                                        <action selector="ButtonTap:" destination="Iti-Za-h3x" eventType="touchUpInside" id="8cV-lz-WKy"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="25" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhV-vb-eIq" customClass="BorderedButton" customModule="FormDesigner" customModuleProvider="target">
+                                                                    <rect key="frame" x="438" y="0.0" width="146" height="30"/>
+                                                                    <state key="normal" title="Memo"/>
+                                                                    <connections>
+                                                                        <action selector="ButtonTap:" destination="Iti-Za-h3x" eventType="touchUpInside" id="eyp-Jp-qqc"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yXR-If-ceu" userLabel="Stack View 3">
+                                                            <rect key="frame" x="0.0" y="78" width="584" height="30"/>
+                                                            <subviews>
+                                                                <button opaque="NO" tag="6" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLY-xW-ieB" customClass="BorderedButton" customModule="FormDesigner" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="146" height="30"/>
+                                                                    <state key="normal" title="Price"/>
+                                                                    <connections>
+                                                                        <action selector="ButtonTap:" destination="Iti-Za-h3x" eventType="touchUpInside" id="j7u-Er-CDX"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8K-P9-bC7" customClass="BorderedButton" customModule="FormDesigner" customModuleProvider="target">
+                                                                    <rect key="frame" x="146" y="0.0" width="146" height="30"/>
+                                                                    <state key="normal" title="Amount"/>
+                                                                    <connections>
+                                                                        <action selector="ButtonTap:" destination="Iti-Za-h3x" eventType="touchUpInside" id="UXH-8B-f0L"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orU-S5-Ybe" customClass="BorderedButton" customModule="FormDesigner" customModuleProvider="target">
+                                                                    <rect key="frame" x="292" y="0.0" width="146" height="30"/>
+                                                                    <state key="normal" title="URL"/>
+                                                                    <connections>
+                                                                        <action selector="ButtonTap:" destination="Iti-Za-h3x" eventType="touchUpInside" id="7jW-kv-OH7"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="15" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSF-6n-22b" customClass="BorderedButton" customModule="FormDesigner" customModuleProvider="target">
+                                                                    <rect key="frame" x="438" y="0.0" width="146" height="30"/>
+                                                                    <state key="normal" title="Switch"/>
+                                                                    <connections>
+                                                                        <action selector="ButtonTap:" destination="Iti-Za-h3x" eventType="touchUpInside" id="3gS-Tf-RrT"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zXL-qr-5ib" userLabel="Stack View 4">
+                                                            <rect key="frame" x="0.0" y="113" width="584" height="30"/>
+                                                            <subviews>
+                                                                <button opaque="NO" tag="18" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ct-AW-aNe" customClass="BorderedButton" customModule="FormDesigner" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="146" height="30"/>
+                                                                    <state key="normal" title="Gender"/>
+                                                                    <connections>
+                                                                        <action selector="ButtonTap:" destination="Iti-Za-h3x" eventType="touchUpInside" id="w0J-Qg-aoQ"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="12" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ftA-Ag-Wn8" customClass="BorderedButton" customModule="FormDesigner" customModuleProvider="target">
+                                                                    <rect key="frame" x="146" y="0.0" width="146" height="30"/>
+                                                                    <state key="normal" title="ID"/>
+                                                                    <connections>
+                                                                        <action selector="ButtonTap:" destination="Iti-Za-h3x" eventType="touchUpInside" id="mgT-3m-Vdq"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="GaS-BL-fca" customClass="BorderedButton" customModule="FormDesigner" customModuleProvider="target">
+                                                                    <rect key="frame" x="292" y="0.0" width="146" height="30"/>
+                                                                    <state key="normal" title="Age"/>
+                                                                    <connections>
+                                                                        <action selector="ButtonTap:" destination="Iti-Za-h3x" eventType="touchUpInside" id="R2W-CY-0EU"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="18" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="G5X-ia-hlO" customClass="BorderedButton" customModule="FormDesigner" customModuleProvider="target">
+                                                                    <rect key="frame" x="438" y="0.0" width="146" height="30"/>
+                                                                    <state key="normal" title="Size"/>
+                                                                    <connections>
+                                                                        <action selector="ButtonTap:" destination="Iti-Za-h3x" eventType="touchUpInside" id="PvD-av-lFY"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="9aI-Aj-3kk" firstAttribute="width" secondItem="Pal-oK-c5e" secondAttribute="width" id="6e9-O9-sRi"/>
+                                                        <constraint firstItem="Dhn-uT-E7L" firstAttribute="width" secondItem="Pal-oK-c5e" secondAttribute="width" id="JS4-gs-65Y"/>
+                                                        <constraint firstItem="zXL-qr-5ib" firstAttribute="width" secondItem="Pal-oK-c5e" secondAttribute="width" id="bRV-Fw-zn7"/>
+                                                        <constraint firstItem="yXR-If-ceu" firstAttribute="width" secondItem="Pal-oK-c5e" secondAttribute="width" id="xfa-yd-Bzq"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Pal-oK-c5e" firstAttribute="leading" secondItem="QKM-UX-Gk0" secondAttribute="leadingMargin" id="Nfc-0D-rok"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Pal-oK-c5e" secondAttribute="trailing" id="TtZ-gq-2Lr"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Pal-oK-c5e" secondAttribute="bottom" id="mQm-ax-W2F"/>
+                                                <constraint firstItem="Pal-oK-c5e" firstAttribute="top" secondItem="QKM-UX-Gk0" secondAttribute="topMargin" id="zda-gH-aNe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="User Define Field:" id="nS1-NY-YvP" userLabel="User Define Fields">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="160" id="pWN-ht-ds8">
+                                        <rect key="frame" x="0.0" y="552" width="600" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pWN-ht-ds8" id="G0R-k1-wlf">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="159"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Egr-IY-fkW">
+                                                    <rect key="frame" x="8" y="8" width="600" height="80"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gFg-5l-8te">
+                                                            <rect key="frame" x="0.0" y="0.0" width="570" height="23"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Field Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNb-mQ-r3y">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="77" height="23"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zJh-NJ-Jge" userLabel="Filed Name">
+                                                                    <rect key="frame" x="87" y="0.0" width="483" height="23"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                </textField>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="05a-lc-PEO">
+                                                            <rect key="frame" x="0.0" y="28" width="570" height="24"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7C-T0-9sS">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="34" height="24"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <segmentedControl opaque="NO" contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JsH-Sg-1op">
+                                                                    <rect key="frame" x="44" y="0.0" width="526" height="25"/>
+                                                                    <segments>
+                                                                        <segment title="Text"/>
+                                                                        <segment title="Number"/>
+                                                                        <segment title="Choice"/>
+                                                                        <segment title="Date"/>
+                                                                        <segment title="Time"/>
+                                                                    </segments>
+                                                                    <connections>
+                                                                        <action selector="FiledTypeChange:" destination="Iti-Za-h3x" eventType="valueChanged" id="aQS-Sd-uHY"/>
+                                                                    </connections>
+                                                                </segmentedControl>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzy-38-qLe">
+                                                            <rect key="frame" x="0.0" y="57" width="570" height="23"/>
+                                                            <subviews>
+                                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dWX-CA-Vni">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="570" height="24"/>
+                                                                    <segments>
+                                                                        <segment title="Name"/>
+                                                                        <segment title="Text"/>
+                                                                        <segment title="E-mail"/>
+                                                                        <segment title="Multi lines"/>
+                                                                    </segments>
+                                                                </segmentedControl>
+                                                                <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="job-gi-oXF">
+                                                                    <rect key="frame" x="570" y="0.0" width="0.0" height="24"/>
+                                                                    <segments>
+                                                                        <segment title="Check"/>
+                                                                        <segment title="Yes/No"/>
+                                                                        <segment title="1 to 10 Slider"/>
+                                                                        <segment title="Stepper"/>
+                                                                        <segment title="Picker"/>
+                                                                    </segments>
+                                                                </segmentedControl>
+                                                                <segmentedControl hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lC4-Gz-2WC">
+                                                                    <rect key="frame" x="570" y="0.0" width="0.0" height="24"/>
+                                                                    <segments>
+                                                                        <segment title="Number"/>
+                                                                        <segment title="Decimal"/>
+                                                                        <segment title="Phone"/>
+                                                                    </segments>
+                                                                </segmentedControl>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="1wx-KW-iGs"/>
+                                                        <constraint firstItem="05a-lc-PEO" firstAttribute="width" secondItem="gFg-5l-8te" secondAttribute="width" id="A5D-m1-MED"/>
+                                                        <constraint firstItem="lzy-38-qLe" firstAttribute="width" secondItem="gFg-5l-8te" secondAttribute="width" id="Bby-V2-yCO"/>
+                                                        <constraint firstItem="05a-lc-PEO" firstAttribute="width" secondItem="Egr-IY-fkW" secondAttribute="width" id="VWr-F3-4L5"/>
+                                                        <constraint firstItem="T7C-T0-9sS" firstAttribute="width" secondItem="gNb-mQ-r3y" secondAttribute="width" id="k7M-Uv-vZz"/>
+                                                        <constraint firstItem="gFg-5l-8te" firstAttribute="width" secondItem="Egr-IY-fkW" secondAttribute="width" constant="-30" id="qXb-La-BsV"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="VWr-F3-4L5"/>
+                                                            <exclude reference="k7M-Uv-vZz"/>
+                                                        </mask>
+                                                    </variation>
+                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="583-cS-lfI" customClass="BorderedButton" customModule="FormDesigner" customModuleProvider="target">
+                                                    <rect key="frame" x="38" y="106" width="524" height="37"/>
+                                                    <state key="normal" title="Add"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="AddCustomField:" destination="Iti-Za-h3x" eventType="touchUpInside" id="3Ov-1t-m7b"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="583-cS-lfI" firstAttribute="leading" secondItem="G0R-k1-wlf" secondAttribute="leadingMargin" constant="30" id="BaF-n5-OA7"/>
+                                                <constraint firstItem="Egr-IY-fkW" firstAttribute="leading" secondItem="G0R-k1-wlf" secondAttribute="leadingMargin" id="DRR-oN-2vh"/>
+                                                <constraint firstItem="583-cS-lfI" firstAttribute="top" secondItem="Egr-IY-fkW" secondAttribute="bottom" constant="18" id="FC1-Md-ZU7"/>
+                                                <constraint firstItem="Egr-IY-fkW" firstAttribute="top" secondItem="G0R-k1-wlf" secondAttribute="topMargin" id="YbS-jh-J5g"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="583-cS-lfI" secondAttribute="trailing" constant="30" id="pIa-6J-5re"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="583-cS-lfI" secondAttribute="bottom" constant="8" id="uSv-xM-tqv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="Egr-IY-fkW" firstAttribute="width" secondItem="pWN-ht-ds8" secondAttribute="width" id="aCa-VA-Ala"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Sample Fields" id="GqV-Ur-XZQ" userLabel="Sample Field">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="Yfa-xd-qIT" userLabel="Data cell">
+                                        <rect key="frame" x="0.0" y="740" width="600" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yfa-xd-qIT" id="PnL-Wi-gua">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="lL2-ML-eBb">
+                                                    <rect key="frame" x="8" y="8" width="584" height="53"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="x9W-Ku-Fja">
+                                                            <rect key="frame" x="0.0" y="0.0" width="584" height="32"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name: John Marc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aM-81-1xZ">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="292" height="32"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Text: This is a text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvN-Kh-LFh">
+                                                                    <rect key="frame" x="292" y="0.0" width="292" height="32"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="U5F-j9-BHl">
+                                                            <rect key="frame" x="0.0" y="32" width="584" height="21"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Number: 99 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zS-vQ-RQC">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="292" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Decimal:3.33" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iF-Dt-Uer">
+                                                                    <rect key="frame" x="292" y="0.0" width="292" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="x9W-Ku-Fja" firstAttribute="width" secondItem="lL2-ML-eBb" secondAttribute="width" id="g4K-ZS-2ab"/>
+                                                        <constraint firstItem="U5F-j9-BHl" firstAttribute="width" secondItem="x9W-Ku-Fja" secondAttribute="width" id="gOr-3W-gb5"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osD-UG-zAo">
+                                                    <rect key="frame" x="339" y="8" width="0.0" height="0.0"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lL2-ML-eBb" firstAttribute="leading" secondItem="PnL-Wi-gua" secondAttribute="leadingMargin" id="1MN-Rm-WXC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lL2-ML-eBb" secondAttribute="trailing" id="3RE-Xb-1Sf"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="lL2-ML-eBb" secondAttribute="bottom" id="51Q-9B-Ctm"/>
+                                                <constraint firstItem="lL2-ML-eBb" firstAttribute="top" secondItem="PnL-Wi-gua" secondAttribute="topMargin" id="yGs-4a-82M"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="eZ7-Hk-NSa" userLabel="Check Cell">
+                                        <rect key="frame" x="0.0" y="810" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eZ7-Hk-NSa" id="kqS-J8-gXQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check Field: Task 1 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ev9-oJ-7TY">
+                                                    <rect key="frame" x="16" y="10" width="547" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RCSPRadioGroupCheckmark" translatesAutoresizingMaskIntoConstraints="NO" id="HE5-6P-JFD">
+                                                    <rect key="frame" x="571" y="16" width="13" height="13"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="13" id="9qW-Bs-e6J"/>
+                                                        <constraint firstAttribute="width" constant="13" id="SMM-ls-nTs"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ev9-oJ-7TY" secondAttribute="bottom" constant="8" id="359-5p-haH"/>
+                                                <constraint firstItem="ev9-oJ-7TY" firstAttribute="top" secondItem="kqS-J8-gXQ" secondAttribute="topMargin" constant="2" id="8Gf-IK-NO6"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="HE5-6P-JFD" secondAttribute="trailing" constant="8" id="SQd-7m-gYg"/>
+                                                <constraint firstItem="HE5-6P-JFD" firstAttribute="top" secondItem="kqS-J8-gXQ" secondAttribute="topMargin" constant="8" id="aLU-KP-Gf4"/>
+                                                <constraint firstItem="ev9-oJ-7TY" firstAttribute="leading" secondItem="kqS-J8-gXQ" secondAttribute="leadingMargin" constant="8" id="g3y-a6-3BT"/>
+                                                <constraint firstItem="HE5-6P-JFD" firstAttribute="leading" secondItem="ev9-oJ-7TY" secondAttribute="trailing" constant="8" id="tu0-Qh-ydW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="jKP-EB-cMK" userLabel="Slider Cell">
+                                        <rect key="frame" x="0.0" y="854" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jKP-EB-cMK" id="yJS-ZM-fv4">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Rxz-3F-J0g">
+                                                    <rect key="frame" x="438" y="10" width="154" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="256-hc-DGV"/>
+                                                    </constraints>
+                                                </slider>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Slider Field: Strength" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEX-1p-9HF">
+                                                    <rect key="frame" x="21" y="14" width="547" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Rxz-3F-J0g" secondAttribute="trailing" constant="2" id="NKd-1f-QK3"/>
+                                                <constraint firstItem="Rxz-3F-J0g" firstAttribute="top" secondItem="yJS-ZM-fv4" secondAttribute="topMargin" constant="2" id="VVX-ak-pFX"/>
+                                                <constraint firstItem="HEX-1p-9HF" firstAttribute="leading" secondItem="yJS-ZM-fv4" secondAttribute="leadingMargin" constant="2" id="nY5-y5-W36"/>
+                                                <constraint firstItem="HEX-1p-9HF" firstAttribute="bottom" secondItem="yJS-ZM-fv4" secondAttribute="bottomMargin" constant="2" id="oNA-GF-yE4"/>
+                                                <constraint firstItem="HEX-1p-9HF" firstAttribute="top" secondItem="yJS-ZM-fv4" secondAttribute="topMargin" constant="2" id="xiv-Y0-HWq"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Rxz-3F-J0g" secondAttribute="bottom" constant="2" id="zql-4I-jKr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="Jyn-03-0vz" userLabel="Switch Cell">
+                                        <rect key="frame" x="0.0" y="898" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jyn-03-0vz" id="o2M-EJ-5tZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes/No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APX-xO-toa">
+                                                    <rect key="frame" x="16" y="10" width="55" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PNl-gS-lCs">
+                                                    <rect key="frame" x="524" y="10" width="62" height="23"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="2WL-0O-GLO"/>
+                                                    </constraints>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="APX-xO-toa" secondAttribute="bottom" constant="2" id="0G7-Of-Qlg"/>
+                                                <constraint firstItem="APX-xO-toa" firstAttribute="top" secondItem="o2M-EJ-5tZ" secondAttribute="topMargin" constant="2" id="6rF-S2-yPZ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="PNl-gS-lCs" secondAttribute="bottom" constant="2" id="CPm-eC-2Cu"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="PNl-gS-lCs" secondAttribute="trailing" constant="8" id="cSq-1p-TfF"/>
+                                                <constraint firstItem="PNl-gS-lCs" firstAttribute="top" secondItem="o2M-EJ-5tZ" secondAttribute="topMargin" constant="2" id="gyE-Jg-W6o"/>
+                                                <constraint firstItem="APX-xO-toa" firstAttribute="leading" secondItem="o2M-EJ-5tZ" secondAttribute="leadingMargin" constant="8" id="jkS-EA-8IO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Iti-Za-h3x" id="3wW-Gg-UVh"/>
+                            <outlet property="delegate" destination="Iti-Za-h3x" id="Nem-mM-Uvw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Form Designer" id="1qC-F4-uKR">
+                        <barButtonItem key="rightBarButtonItem" title="Create" id="8NJ-Fj-cWI">
+                            <connections>
+                                <segue destination="ww9-m1-kCQ" kind="show" identifier="form" id="olx-pX-lTS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="1000"/>
+                    <connections>
+                        <outlet property="ControlSegment" destination="job-gi-oXF" id="0oU-rK-3aC"/>
+                        <outlet property="FieldName" destination="zJh-NJ-Jge" id="M4E-vb-ycj"/>
+                        <outlet property="FormTitle" destination="wPP-JE-wD9" id="Hga-Lw-k3L"/>
+                        <outlet property="NumberSegment" destination="lC4-Gz-2WC" id="IZc-CA-j6a"/>
+                        <outlet property="TextSegment" destination="dWX-CA-Vni" id="Isb-MP-9TR"/>
+                        <outlet property="TypeSegment" destination="JsH-Sg-1op" id="a4b-UL-j0D"/>
+                        <outlet property="tagListView" destination="Fdk-JT-lPY" id="WFq-oE-uaT"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EwI-Qe-vy9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="227" y="404"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="RCSPRadioGroupCheckmark" width="13" height="13"/>
+    </resources>
+</document>
